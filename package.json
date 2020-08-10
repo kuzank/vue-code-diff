@@ -22,7 +22,8 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "demo": "node build/demo.js"
+    "demo": "node build/demo.js",
+    "build2": "webpack-dev-server build --config build/webpack.dev.conf.js"
   },
   "dependencies": {
     "diff": "^3.5.0",

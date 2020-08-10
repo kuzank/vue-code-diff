@@ -10,6 +10,7 @@ import * as Diff2Html from 'diff2html'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
 import 'diff2html/bundles/css/diff2html.min.css'
+
 export default {
   name: 'code-diff',
   props: {
@@ -68,9 +69,10 @@ export default {
       function hljs (html) {
         return html.replace(/<span class="d2h-code-line-ctn">(.+?)<\/span>/g, '<span class="d2h-code-line-ctn"><code>$1</code></span>')
       }
+
       if (isShowNoChange) {
-        oldString = 'File Without Change\tOldString: ======================== \n' + oldString
-        newString = 'File Without Change\tNewString: ======================== \n' + newString
+        // oldString = 'File Without Change\tOldString: ======================== \n' + oldString
+        // newString = 'File Without Change\tNewString: ======================== \n' + newString
       }
       let args = [fileName, oldString, newString, '', '', {context: context}]
       let dd = createPatch(...args)
@@ -79,13 +81,15 @@ export default {
         outputFormat: outputFormat,
         drawFileList: drawFileList,
         matching: 'lines',
-        renderNothingWhenEmpty: renderNothingWhenEmpty})
+        renderNothingWhenEmpty: renderNothingWhenEmpty
+      })
       let html = Diff2Html.html(outStr, {
         inputFormat: 'json',
         outputFormat: outputFormat,
         drawFileList: drawFileList,
         matching: 'lines',
-        renderNothingWhenEmpty: renderNothingWhenEmpty})
+        renderNothingWhenEmpty: renderNothingWhenEmpty
+      })
       return hljs(html)
     }
   }
@@ -93,13 +97,14 @@ export default {
 </script>
 
 <style>
-.hljs{
+.hljs {
   display: inline-block;
   padding: 0;
   background: transparent;
-  vertical-align:middle
+  vertical-align: middle
 }
-.d2h-file-header{
+
+.d2h-file-header {
   display: none
 }
 </style>
