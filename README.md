@@ -43,12 +43,8 @@ export default {
 
 
 ## 效果展示
+![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ghlvs3wbunj31nn0u01bk.jpg)
 
-### line-by-line
-![image](https://github.com/ddchef/vue-code-diff/blob/master/2018-06-01.png?raw=true)
-
-### side-by-side
-![image](https://github.com/ddchef/vue-code-diff/blob/master/2018050615272.png?raw=true)
 
 ## LICENSE
 [MIT](LICENSE)
